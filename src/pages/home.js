@@ -4,6 +4,7 @@ import instagram from "../logos/Instagram.png";
 import google from "../logos/Google.png";
 import camera from "../logos/Camera.png";
 import message from "../logos/Message.png";
+import calculator from "../logos/calculator.png";
 import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
@@ -53,22 +54,25 @@ export const Home = () => {
             <a href="https://www.youtube.com/">
               <img src={youtube} alt="" srcset="" />
             </a>
-
             <p>YouTube</p>
           </div>
           <div className="app">
             <a href="https://www.google.co.in/">
               <img src={google} alt="" srcset="" />
             </a>
-
             <p>Google</p>
           </div>
           <div className="app">
             <a href="https://www.instagram.com/">
               <img src={instagram} alt="" srcset="" />
             </a>
-
             <p>Instagram</p>
+          </div>
+          <div className="app">
+            <a href="https://nishant0121.github.io/Calculator/">
+              <img src={calculator} alt="" srcset="" />
+            </a>
+            <p>Calculator</p>
           </div>
           <div className="app">
             <img src={message} alt="" srcset="" />

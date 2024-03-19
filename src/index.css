@@ -39,6 +39,10 @@ code {
   border-radius: 1rem;
   /* box-shadow: #00000033 0px 1px 20px 0px; */
 }
+.app > a > img {
+  height: 60px;
+  border-radius: 1rem;
+}
 
 .taskbar {
   position: fixed;

@@ -1,8 +1,8 @@
 import "./App.css";
-import { Land } from "./pages/land";
-import { Home } from "./pages/home";
+import { Land } from "./pages/land.js";
+import { Home } from "./pages/home.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Cam } from "./app/cam";
+import { Cam } from "./app/cam.js";
 
 function App() {
   return (
