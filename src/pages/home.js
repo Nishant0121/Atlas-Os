@@ -3,7 +3,7 @@ import youtube from "../logos/Youtube.png";
 import instagram from "../logos/Instagram.png";
 import google from "../logos/Google.png";
 import camera from "../logos/Camera.png";
-import message from "../logos/Message.png";
+import expense from "../logos/expense.png";
 import calculator from "../logos/calculator.png";
 import fitness from "../logos/fitness.png";
 import { useNavigate } from "react-router-dom";
@@ -80,6 +80,12 @@ export const Home = () => {
               <img src={fitness} alt="" srcset="" />
             </a>
             <p>Bhago</p>
+          </div>
+          <div className="app">
+            <a href="https://buget-manager.web.app/">
+              <img src={expense} alt="" srcset="" />
+            </a>
+            <p>Expense</p>
           </div>
         </div>
         <div className="taskbar flex justify-center items-center w-100">
