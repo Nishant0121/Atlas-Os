@@ -5,6 +5,7 @@ import google from "../logos/Google.png";
 import camera from "../logos/Camera.png";
 import message from "../logos/Message.png";
 import calculator from "../logos/calculator.png";
+import fitness from "../logos/fitness.png";
 import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
@@ -75,8 +76,10 @@ export const Home = () => {
             <p>Calculator</p>
           </div>
           <div className="app">
-            <img src={message} alt="" srcset="" />
-            <p>Message</p>
+            <a href="https://fitness-app-91739.web.app">
+              <img src={fitness} alt="" srcset="" />
+            </a>
+            <p>Bhago</p>
           </div>
         </div>
         <div className="taskbar flex justify-center items-center w-100">
@@ -85,13 +88,19 @@ export const Home = () => {
               <img src={camera} onClick={openCam} alt="" srcset="" />
             </div>
             <div className="app m-1">
-              <img src={youtube} alt="" srcset="" />
+              <a href="https://www.youtube.com/">
+                <img src={youtube} alt="" srcset="" />
+              </a>
             </div>
             <div className="app m-1">
-              <img src={instagram} alt="" srcset="" />
+              <a href="https://www.instagram.com/">
+                <img src={instagram} alt="" srcset="" />
+              </a>
             </div>
             <div className="app m-1">
-              <img src={google} alt="" srcset="" />
+              <a href="https://www.google.co.in/">
+                <img src={google} alt="" srcset="" />
+              </a>
             </div>
           </div>
         </div>
