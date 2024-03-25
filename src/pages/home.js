@@ -6,6 +6,7 @@ import camera from "../logos/Camera.png";
 import expense from "../logos/expense.png";
 import calculator from "../logos/calculator.png";
 import fitness from "../logos/fitness.png";
+import dev from "../logos/dev.jpg";
 import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
@@ -86,6 +87,12 @@ export const Home = () => {
               <img src={expense} alt="" srcset="" />
             </a>
             <p>Expense</p>
+          </div>
+          <div className="app">
+            <a href="https://portfolio-nishant.vercel.app/">
+              <img src={dev} alt="" srcset="" />
+            </a>
+            <p>About developer</p>
           </div>
         </div>
         <div className="taskbar flex justify-center items-center w-100">
