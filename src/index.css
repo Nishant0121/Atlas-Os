@@ -45,17 +45,33 @@ code {
 }
 
 .taskbar {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 0;
 }
 .content {
-  background: #00000066;
   backdrop-filter: blur(5px);
   width: fit-content;
 }
-
+.w-50 {
+  width: 50%;
+}
+.w-100 {
+  width: 100%;
+}
+.burger {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid; /* Adjust border styling as needed */
+  z-index: 10;
+}
+.menubar {
+  animation: slideDown 0.5s ease forwards;
+}
 .top-bar {
   width: 100%;
 }
@@ -68,5 +84,19 @@ code {
     grid-template-columns: repeat(4, 1fr);
     margin-top: 2rem;
     row-gap: 2rem;
+  }
+  .date {
+    display: none;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

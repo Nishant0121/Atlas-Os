@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import youtube from "../logos/Youtube.png";
 import instagram from "../logos/Instagram.png";
 import google from "../logos/Google.png";
@@ -7,51 +7,20 @@ import expense from "../logos/expense.png";
 import calculator from "../logos/calculator.png";
 import fitness from "../logos/fitness.png";
 import dev from "../logos/dev.jpg";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import StatusBar from "../components/statusbar.js";
+import TaskBar from "../components/taskbar.js";
 
 export const Home = () => {
-  const [time, setTime] = useState(new Date());
-  const [date, setDate] = useState(new Date());
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date());
-      setDate(new Date());
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
-  const openCam = () => {
-    navigate("/home/cam");
-  };
-
   return (
     <div>
       <div className="window h-svh bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-        <div className="topbar  p-2 flex justify-between">
-          <div className="logo p-2">
-            <p className=" text-xl font-semibold">Atlas OS</p>
-          </div>
-          <p className="p-2 font-semibold">
-            {time.getHours()}:
-            {time.getMinutes() < 10
-              ? `0${time.getMinutes()}`
-              : time.getMinutes()}
-            :
-            {time.getSeconds() < 10
-              ? `0${time.getSeconds()}`
-              : time.getSeconds()}
-          </p>
-        </div>
+        <StatusBar />
         <div className="apps text-semibold">
-          <div className="app">
-            <img src={camera} onClick={openCam} alt="" srcset="" />
+          <Link to={"/home/cam"} className="app">
+            <img src={camera} alt="" srcset="" />
             <p>Camera</p>
-          </div>
+          </Link>
           <div className="app">
             <a href="https://www.youtube.com/">
               <img src={youtube} alt="" srcset="" />
@@ -95,28 +64,7 @@ export const Home = () => {
             <p>About developer</p>
           </div>
         </div>
-        <div className="taskbar flex justify-center items-center w-100">
-          <div className="content flex justify-center items-center pr-2 pl-2 m-2  rounded-lg text-white ">
-            <div className="app m-1">
-              <img src={camera} onClick={openCam} alt="" srcset="" />
-            </div>
-            <div className="app m-1">
-              <a href="https://www.youtube.com/">
-                <img src={youtube} alt="" srcset="" />
-              </a>
-            </div>
-            <div className="app m-1">
-              <a href="https://www.instagram.com/">
-                <img src={instagram} alt="" srcset="" />
-              </a>
-            </div>
-            <div className="app m-1">
-              <a href="https://www.google.co.in/">
-                <img src={google} alt="" srcset="" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <TaskBar />
       </div>
     </div>
   );
