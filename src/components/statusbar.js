@@ -72,7 +72,7 @@ export default function StatusBar() {
   };
   return (
     <div
-      className={`topbar flex justify-between ${
+      className={`relative topbar flex justify-between ${
         isDarkMode ? " text-light" : "text-dark"
       }`}
     >
@@ -82,11 +82,41 @@ export default function StatusBar() {
           || {date.getDate()} {month(date)} {date.getFullYear()}
         </p>
       </div>
+      <button
+        className="burger absolute left-50 px-4 rounded-lg bg-transparent transition duration-150 ease-in-out z-10 "
+        onClick={toggleMenu}
+      >
+        <div className={isDarkMode ? "text-light" : "text-dark"}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 h-6"
+          >
+            <path d="M12 1.5a.75.75 0 0 1 .75.75V7.5h-1.5V2.25A.75.75 0 0 1 12 1.5ZM11.25 7.5v5.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V7.5h3.75a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h3.75Z" />
+          </svg>
+        </div>
+      </button>
       <div>
         {battery && (
           <p className=" flex items-center justify-center m-2">
             {Math.round(battery.level * 100)}%{" "}
-            {battery.charging ? "(Charging)" : ""}
+            {battery.charging ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.58 1.077a.75.75 0 0 1 .405.82L9.165 6h4.085a.75.75 0 0 1 .567 1.241l-6.5 7.5a.75.75 0 0 1-1.302-.638L6.835 10H2.75a.75.75 0 0 1-.567-1.241l6.5-7.5a.75.75 0 0 1 .897-.182Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            ) : (
+              ""
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -102,10 +132,7 @@ export default function StatusBar() {
           </p>
         )}
       </div>
-      <button
-        className="burger absolute top-0 right-0 p-5 rounded-lg text-white bg-dark transition duration-150 ease-in-out border z-10"
-        onClick={toggleMenu}
-      ></button>
+
       {isOpen && <MenuBar />}
     </div>
   );
