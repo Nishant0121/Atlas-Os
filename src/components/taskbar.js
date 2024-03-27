@@ -7,16 +7,12 @@ import { Link } from "react-router-dom";
 import { ModeContext } from "../contex.js";
 
 export default function TaskBar() {
-  const { isDarkMode, setIsDarkMode } = useContext(ModeContext);
+  const { isDarkMode } = useContext(ModeContext);
   return (
-    <div
-      className={`taskbar flex justify-center items-center w-100${
-        isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
-      }`}
-    >
+    <div className="taskbar flex justify-center items-center w-100">
       <div
-        className={`content flex justify-center items-center pr-2 pl-2 m-2  rounded-lg ${
-          isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+        className={`content flex justify-center backdrop-blur-md items-center pr-2 pl-2 m-2  rounded-lg ${
+          isDarkMode ? "bg-dark/5 text-light" : "bg-light/55 text-dark"
         }`}
       >
         <Link to={"/home/cam"} className="app m-1">

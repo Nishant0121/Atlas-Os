@@ -71,6 +71,7 @@ code {
 }
 .menubar {
   animation: slideDown 0.5s ease forwards;
+  transition: all ease 0.5s;
 }
 .top-bar {
   width: 100%;

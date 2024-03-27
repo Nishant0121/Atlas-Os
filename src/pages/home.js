@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import youtube from "../logos/Youtube.png";
 import instagram from "../logos/Instagram.png";
 import google from "../logos/Google.png";
@@ -11,10 +11,17 @@ import { Link } from "react-router-dom";
 import StatusBar from "../components/statusbar.js";
 import TaskBar from "../components/taskbar.js";
 
+import { ModeContext } from "../contex.js";
+
 export const Home = () => {
+  const { isDarkMode, setIsDarkMode } = useContext(ModeContext);
   return (
     <div>
-      <div className="window h-svh bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
+      <div
+        className={`window h-svh ${
+          isDarkMode ? "bg-dark text-light" : "bg-light/5 text-dark"
+        }`}
+      >
         <StatusBar />
         <div className="apps text-semibold">
           <Link to={"/home/cam"} className="app">
