@@ -71,6 +71,21 @@ code {
 .top-bar {
   width: 100%;
 }
+
+/* background */
+.bg-img-dark {
+  background-image: url("./images/dark.jpeg");
+  background-size: cover; /* This will ensure that your image covers the whole area */
+  background-repeat: no-repeat; /* This will prevent the image from repeating */
+  background-position: center; /* This will position your image in the center */
+}
+.bg-img-light {
+  background-image: url("./images/light.jpeg");
+  background-size: cover; /* This will ensure that your image covers the whole area */
+  background-repeat: no-repeat; /* This will prevent the image from repeating */
+  background-position: center; /* This will position your image in the center */
+}
+
 @media (max-width: 770px) {
   .phone {
     display: none;
@@ -83,6 +98,13 @@ code {
   }
   .date {
     display: none;
+  }
+  .app > img {
+    height: 55px;
+  }
+  .app > a > img {
+    height: 55px;
+    border-radius: 1rem;
   }
 }
 

@@ -14,12 +14,12 @@ import TaskBar from "../components/taskbar.js";
 import { ModeContext } from "../contex.js";
 
 export const Home = () => {
-  const { isDarkMode, setIsDarkMode } = useContext(ModeContext);
+  const { isDarkMode } = useContext(ModeContext);
   return (
     <div>
       <div
         className={`window h-svh ${
-          isDarkMode ? "bg-dark text-light" : "bg-light/5 text-dark"
+          isDarkMode ? "bg-img-dark text-light" : "bg-img-light text-dark"
         }`}
       >
         <StatusBar />

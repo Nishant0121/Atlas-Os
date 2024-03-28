@@ -6,7 +6,6 @@ export default function MenuBar() {
   const [time, setTime] = useState(new Date());
   const [date, setDate] = useState(new Date());
   const [battery, setBattery] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
   const { isDarkMode, setIsDarkMode } = useContext(ModeContext);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ export default function MenuBar() {
     } else {
       console.warn("Battery Status API is not supported on this browser.");
     }
-  }, []);
+  }, [setBattery]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -62,17 +61,13 @@ export default function MenuBar() {
     return months[date.getMonth()];
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const toggleMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (
     <div
-      className={`menubar backdrop-blur-md absolute top-0 right-0 border h-svh z-200 w-100 ${
+      className={`menubar backdrop-blur-md absolute top-0 right-0  h-svh z-200 w-100 ${
         isDarkMode ? "bg-dark/[0.65] text-light" : "bg-light/5 text-dark"
       }`}
     >
@@ -95,7 +90,9 @@ export default function MenuBar() {
         <div className="buttons mt-4 grid grid-cols-4">
           <div className="button">
             <button
-              className="border rounded-full p-4 text-lg"
+              className={` rounded-full shadow-md p-4 text-lg ${
+                isDarkMode ? "bg-prim_dark" : "bg-peim_light"
+              }`}
               onClick={toggleMode}
             >
               {isDarkMode ? (
@@ -125,7 +122,9 @@ export default function MenuBar() {
           </div>
           <div className="button">
             <button
-              className="border rounded-full p-4 text-lg"
+              className={` rounded-full shadow-md p-4 text-lg ${
+                isDarkMode ? "bg-prim_dark" : "bg-peim_light"
+              }`}
               onClick={toggleMode}
             >
               {isDarkMode ? (
@@ -155,7 +154,9 @@ export default function MenuBar() {
           </div>
           <div className="button">
             <button
-              className="border rounded-full p-4 text-lg"
+              className={` rounded-full shadow-md  p-4 text-lg ${
+                isDarkMode ? "bg-prim_dark  " : "bg-peim_light"
+              }`}
               onClick={toggleMode}
             >
               {isDarkMode ? (
@@ -185,7 +186,9 @@ export default function MenuBar() {
           </div>
           <div className="button">
             <button
-              className="border rounded-full p-4 text-lg"
+              className={` rounded-full shadow-md p-4 text-lg ${
+                isDarkMode ? "bg-prim_dark" : "bg-peim_light"
+              }`}
               onClick={toggleMode}
             >
               {isDarkMode ? (
