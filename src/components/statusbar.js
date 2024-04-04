@@ -75,7 +75,7 @@ export default function StatusBar() {
     >
       <div className="logo flex items-center justify-center">
         <p className="p-1 font-semibold">{formatTime(time)}</p>
-        <p className="date">
+        <p className="date md: hidden">
           || {date.getDate()} {month(date)} {date.getFullYear()}
         </p>
       </div>

@@ -96,9 +96,7 @@ code {
     margin-top: 2rem;
     row-gap: 2rem;
   }
-  .date {
-    display: none;
-  }
+
   .app > img {
     height: 55px;
   }
