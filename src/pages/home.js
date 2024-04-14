@@ -4,6 +4,7 @@ import instagram from "../logos/Instagram.png";
 import google from "../logos/Google.png";
 import camera from "../logos/Camera.png";
 import expense from "../logos/expense.png";
+import weather from "../logos/weather.png";
 import calculator from "../logos/calculator.png";
 import fitness from "../logos/fitness.png";
 import dev from "../logos/dev.jpg";
@@ -63,6 +64,12 @@ export const Home = () => {
               <img src={expense} alt="" srcset="" />
             </a>
             <p>Expense</p>
+          </div>
+          <div className="app">
+            <a href="https://weatherapp-three-ashy.vercel.app/">
+              <img src={weather} alt="" srcset="" />
+            </a>
+            <p>Weather Info</p>
           </div>
           <div className="app">
             <a href="https://portfolio-nishant.vercel.app/">
