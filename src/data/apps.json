@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Camera",
+    "link": "/home/cam",
+    "img": "/logos/Camera.png"
+  },
+  {
+    "title": "Example 2",
+    "link": "https://example.com/2",
+    "img": "https://example.com/images/2.jpg"
+  },
+  {
+    "title": "Example 3",
+    "link": "https://example.com/3",
+    "img": "https://example.com/images/3.jpg"
+  },
+  {
+    "title": "Example 4",
+    "link": "https://example.com/4",
+    "img": "https://example.com/images/4.jpg"
+  },
+  {
+    "title": "Example 5",
+    "link": "https://example.com/5",
+    "img": "https://example.com/images/5.jpg"
+  },
+  {
+    "title": "Example 6",
+    "link": "https://example.com/6",
+    "img": "https://example.com/images/6.jpg"
+  }
+]

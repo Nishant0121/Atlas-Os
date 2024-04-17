@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Camera",
+    "link": "/home/cam",
+    "img": "/logos/Camera.png"
+  },
+  {
+    "title": "Youtube",
+    "link": "https://www.youtube.com/",
+    "img": "/logos/Youtube.png"
+  },
+  {
+    "title": "Google",
+    "link": "https://www.google.co.in/",
+    "img": "/logos/Google.png"
+  },
+  {
+    "title": "Instagram",
+    "link": "https://www.instagram.com/",
+    "img": "/logos/Instagram.png"
+  },
+  {
+    "title": "Calculator",
+    "link": "https://nishant0121.github.io/Calculator/",
+    "img": "/logos/calculator.png"
+  },
+  {
+    "title": "Bhago",
+    "link": "https://fitness-app-91739.web.app",
+    "img": "/logos/fitness.png"
+  },
+  {
+    "title": "Expense",
+    "link": "https://buget-manager.web.app/",
+    "img": "/logos/expense.png"
+  },
+  {
+    "title": "Weather Info",
+    "link": "https://weatherapp-three-ashy.vercel.app/",
+    "img": "/logos/weather.png"
+  },
+  {
+    "title": "To Do List",
+    "link": "https://nishant0121.github.io/To-Do-list/",
+    "img": "/logos/todo.png"
+  },
+  {
+    "title": "About developer",
+    "link": "https://portfolio-nishant.vercel.app/",
+    "img": "/logos/dev.jpg"
+  }
+]
