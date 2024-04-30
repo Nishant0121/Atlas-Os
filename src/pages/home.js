@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import StatusBar from "../components/statusbar.js";
 import TaskBar from "../components/taskbar.js";
-
+import { motion } from "framer-motion";
 import apps from "../apps.json";
 
 import { ModeContext } from "../contex.js";
@@ -10,7 +10,26 @@ import { ModeContext } from "../contex.js";
 export const Home = () => {
   const { isDarkMode } = useContext(ModeContext);
 
-  console.log(apps);
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const items = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <div>
       <div
@@ -20,16 +39,21 @@ export const Home = () => {
       >
         <StatusBar />
 
-        <div className="apps text-semibold">
+        <motion.div
+          className="apps text-semibold"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
           {apps.map((item, index) => (
-            <div className="app">
+            <motion.div className="app" variants={items}>
               <Link to={`${item.link}`}>
-                <img src={item.img} alt="" srcset="" />
+                <img src={item.img} alt="" />
                 <p>{item.title}</p>
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         <TaskBar />
       </div>
     </div>
