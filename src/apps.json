@@ -45,6 +45,11 @@
     "img": "/logos/todo.png"
   },
   {
+    "title": "The Gallery",
+    "link": "https://the-gallery-frontend.vercel.app/",
+    "img": "/logos/thegallery.png"
+  },
+  {
     "title": "About developer",
     "link": "https://portfolio-nishant.vercel.app/",
     "img": "/logos/dev.jpg"
