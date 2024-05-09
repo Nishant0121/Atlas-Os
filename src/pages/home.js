@@ -33,7 +33,7 @@ export const Home = () => {
   return (
     <div>
       <div
-        className={`window h-svh ${
+        className={`window h-svh z-9 ${
           isDarkMode ? "bg-img-dark text-light" : "bg-img-light text-dark"
         }`}
       >
