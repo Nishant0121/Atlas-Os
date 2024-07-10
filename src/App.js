@@ -11,6 +11,7 @@ function App() {
       <ModeContextProvider>
         <BrowserRouter>
           <Routes>
+            <Route index element={<Home />} />
             <Route path="/" element={<Land />} />
             <Route path="/home" element={<Home />} />
             <Route path="/home/cam" element={<Cam />} />
