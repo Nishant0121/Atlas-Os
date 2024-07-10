@@ -47,7 +47,10 @@ export const Home = () => {
         >
           {apps.map((item, index) => (
             <motion.div className="app" variants={items}>
-              <Link to={`${item.link}`}>
+              <Link
+                className=" flex items-center justify-center flex-col"
+                to={`${item.link}`}
+              >
                 <img src={item.img} alt="" />
                 <p>{item.title}</p>
               </Link>

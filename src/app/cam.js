@@ -22,7 +22,7 @@ export const Cam = () => {
 
   return (
     <div className=" flex flex-col h-screen w-screen  bg-slate-800 text-white justify-center items-center">
-      <div className="camera  flex flex-col justify-center items-center border p-2 rounded-xl border-gray-200">
+      <div className="camera min-h-[550px]  flex flex-col justify-center items-center border p-2 rounded-xl border-gray-200">
         <div className="top-bar flex justify-between  p-2 m-2 items-center w-100 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg">
           <h1>Camera</h1>
           <IoMdClose style={{ fontSize: "2rem" }} onClick={goToHome} />

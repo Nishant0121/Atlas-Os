@@ -50,6 +50,11 @@
     "img": "/logos/thegallery.png"
   },
   {
+    "title": "Travel Go",
+    "link": "https://travel-g0.vercel.app/",
+    "img": "/logos/travelgo.jpeg"
+  },
+  {
     "title": "About developer",
     "link": "https://portfolio-nishant.vercel.app/",
     "img": "/logos/dev.jpg"
