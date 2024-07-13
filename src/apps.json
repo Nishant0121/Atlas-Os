@@ -55,6 +55,11 @@
     "img": "/logos/travelgo.jpeg"
   },
   {
+    "title": "Chit Chat",
+    "link": "https://chit-chat-7gt1.onrender.com",
+    "img": "/logos/ChitChat.jpg"
+  },
+  {
     "title": "About developer",
     "link": "https://portfolio-nishant.vercel.app/",
     "img": "/logos/dev.jpg"

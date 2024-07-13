@@ -21,12 +21,6 @@ code {
 .ytsvg {
   z-index: 20;
 }
-.apps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 2rem;
-  row-gap: 2rem;
-}
 .app {
   display: flex;
   flex-direction: column;
@@ -89,12 +83,6 @@ code {
 @media (max-width: 770px) {
   .phone {
     display: none;
-  }
-  .apps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 2rem;
-    row-gap: 2rem;
   }
   .app > img {
     height: 55px;
