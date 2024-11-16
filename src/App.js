@@ -4,6 +4,7 @@ import { Home } from "./pages/home.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Cam } from "./app/cam.js";
 import ModeContextProvider from "./contex.js";
+import ImageRecognition from "./app/imgReco.js";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/" element={<Land />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/home/cam" element={<Cam />} />
+            <Route path="/home/cam" element={<ImageRecognition />} />
           </Routes>
         </BrowserRouter>
       </ModeContextProvider>
