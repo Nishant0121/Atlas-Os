@@ -74,7 +74,7 @@ export default function ImageRecognition() {
             textAlign: "center",
             zindex: 9,
           }}
-          className=" rounded-lg w-full"
+          className=" rounded-lg sm:w-full md:w-full lg:max-w[600px]"
         />
 
         <canvas
@@ -88,7 +88,7 @@ export default function ImageRecognition() {
             textAlign: "center",
             zindex: 8,
           }}
-          className=" rounded-lg w-full"
+          className=" rounded-lg sm:w-full md:w-full lg:max-w[600px]"
         />
       </header>
     </div>
